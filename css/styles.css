@@ -11,6 +11,7 @@
 body {
    font-family: "Open Sans", sans-serif;
    background-color: black;
+   max-width: 1200px;
 }
 
 h1 {
@@ -232,7 +233,6 @@ nav a:hover {
 
 #location {
    text-align: center;  
-   width: 100%;
    padding: 40px 20px;   
    margin: 10px;
 }
@@ -330,7 +330,7 @@ nav a:hover {
 }
 
 #contact form {
-   margin: 0 auto;
+   margin: 0 auto;   
 }
 
 @media (width >= 810px) {
@@ -340,11 +340,13 @@ nav a:hover {
 }
 
 footer p {
-   background-color: rgb(99, 69, 138);
+   background-color: rgba(99, 69, 138, 0.8);
    color: #ffffff;
    text-align: right;
-   font-size: x-small;
-   padding: 10px 10px;
+   font-size: large;
+   padding: 20px 20px;
+   margin: 0;
+   
 }
 
 footer p a {
