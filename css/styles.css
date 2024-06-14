@@ -39,23 +39,24 @@ h3 {
    margin: 0 auto 40px auto;
 }
 
-header h1 {
-   width: 100%;
-   margin: 0;
-   min-height: 150px;
-   text-align: left;
-   padding: 140px 40px 140px 40px;
-   color: #ffffff;
-   background-color: sienna;
+.header {
    background-image: url("../img/header.jpg");
-   background-size: cover;
+   height: 400px;
    background-position: center;
-   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   padding: 50px;
+   color: white;
+
 }
 
-@media (width <= 769px){
-   header h1 {
+@media (width <=769px) {
+   .header {
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../img/header-mini.png");
+      text-align: center;
+      color: black;
+      height: 200px;
    }
 }
 
@@ -86,7 +87,7 @@ nav a:hover {
    border-radius: 5px;
 }
 
-@media (width <= 992px){
+@media (width <=992px) {
    #navegacion {
       justify-content: end;
    }
@@ -95,29 +96,35 @@ nav a:hover {
 /* Who We are section */
 
 #whoweare {
-   background-color: rgba(211, 211, 211, 0.192); 
+   background-color: rgba(211, 211, 211, 0.192);
    color: grey;
    width: 100%;
    padding: 30px 50px 0px 50px;
 }
+
 .titleSection {
    color: black;
 }
+
 .lore {
    color: black;
 }
+
 .subtitleSection {
    text-align: center;
 }
+
 .pictexto {
    float: left;
    margin-right: 10px;
    margin-bottom: 5px;
 }
+
 .picpublicidad {
    margin: 5px 5px 5px 10px;
    float: right;
 }
+
 .columnas {
    text-align: justify;
    color: gray;
@@ -125,15 +132,16 @@ nav a:hover {
    margin: 20px;
    padding: 2px 40px;
 }
+
 .vl {
-   border-left:  1px solid rgba(119, 136, 153, 0.274);
+   border-left: 1px solid rgba(119, 136, 153, 0.274);
    padding-left: 20px;
-   position:relative;
+   position: relative;
 }
 
-@media (width <= 992px){
+@media (width <=992px) {
    .vl {
-      border-left:  none;
+      border-left: none;
       padding-left: 0px;
    }
 }
@@ -159,28 +167,28 @@ nav a:hover {
 }
 
 .cardServices {
-  text-align: justify;
-  margin-bottom: 50px;
-  padding-right: 25px;
-} 
-
-.cardServices p {
-  font-size: small;
-} 
-
-#services i:hover {
-  background-color: rgb(99, 69, 138);
-  color: #ffffff;
-  transition: 0.5s;
+   text-align: justify;
+   margin-bottom: 50px;
+   padding-right: 25px;
 }
 
 .cardServices p {
-  line-height: 2em;
-  color: gray;
+   font-size: small;
+}
+
+#services i:hover {
+   background-color: rgb(99, 69, 138);
+   color: #ffffff;
+   transition: 0.5s;
+}
+
+.cardServices p {
+   line-height: 2em;
+   color: gray;
 }
 
 .cardServices h3 {
-  margin-bottom: 25px;
+   margin-bottom: 25px;
 }
 
 /*--------------------------------------------Portfolio Section--------------------------------------------*/
@@ -198,7 +206,8 @@ nav a:hover {
    margin: 5px;
    padding: 5px;
 }
-                       /*Valores generales para ajustar las imagenes*/
+
+/*Valores generales para ajustar las imagenes*/
 .rotacion360 {
    width: 250px;
    height: 150px;
@@ -208,21 +217,22 @@ nav a:hover {
 
 .rotacion360 {
    transform: rotate(-360deg);
-   transition: 1s;                       
+   transition: 1s;
 }
 
-.rotacion360:hover{
+.rotacion360:hover {
    transform: rotate(360deg);
    transition: 1s ease-in-out;
    border-radius: 50%;
 }
-                       /*Valores de transicion para la rotacion*/
+
+/*Valores de transicion para la rotacion*/
 .imgrote {
    transform: rotate(0deg);
    transition: 1s;
 }
 
-.imgrote:hover{
+.imgrote:hover {
    transform: rotate(-10deg);
    transition: 1s ease-in-out;
 }
@@ -232,65 +242,69 @@ nav a:hover {
 
 
 #location {
-   text-align: center;  
-   padding: 40px 20px;   
-   margin: 10px;
+   text-align: center;
+   padding: 40px 20px;
+   margin: 0px;
 }
 
-#titleMaps h2 {    
+#titleMaps h2 {
    font-family: "Open Sans", sans-serif;
    width: 100%;
-   padding: 10px;    
+   padding: 10px;
    margin: 10px;
 }
 
 #titleMaps h3 {
    font-family: "Open Sans", sans-serif;
    width: 100%;
-   padding: 10px;    
+   padding: 10px;
    margin: 10px;
    color: gray;
 }
 
-#maps >article >iframe{
+#maps>article>iframe {
    column-count: 2;
-   padding: 1px;    
+   padding: 1px;
    margin: 1px;
    background-color: black;
 }
 
-#mapa{
+#mapa {
    width: 300px;
    height: 300px;
    border-radius: 50%;
    transition: 0.5s;
 }
 
-#mapaGoogle :hover{
+#mapaGoogle {
+   margin-bottom: 10px;
+}
+
+#mapaGoogle :hover {
    border-radius: 0px;
    transform: scale(1.2);
 }
 
-#location address{
+#location address {
    text-align: left;
    width: 100%;
-   padding: 10px;    
+   padding: 10px;
 }
 
-@media (width <= 769px){
+@media (width <=769px) {
 
-   #location{
+   #location {
       text-align: center;
       width: 100%;
-     
+
    }
 
-   #titleMaps h2 {    
+   #titleMaps h2 {
       font-family: "Open Sans", sans-serif;
       text-align: center;
       width: 100%;
    }
-   
+
    #titleMaps h3 {
       font-family: "Open Sans", sans-serif;
       text-align: center;
@@ -298,21 +312,21 @@ nav a:hover {
       color: gray;
    }
 
-   #location address{
+   #location address {
       text-align: center;
       width: 100%;
    }
 
-   #address strong{
+   #address strong {
       padding: 50px;
    }
- 
-   #mapaGoogle{
+
+   #mapaGoogle {
       text-align: center;
       width: 100%;
    }
 
-   #maps > article > iframe{
+   #maps>article>iframe {
       background-color: black;
    }
 }
@@ -334,10 +348,10 @@ nav a:hover {
 }
 
 #contact form {
-   margin: 0 auto;   
+   margin: 0 auto;
 }
 
-@media (width >= 810px) {
+@media (width >=810px) {
    #contact form {
       width: 50%;
    }
@@ -350,7 +364,7 @@ footer p {
    font-size: large;
    padding: 20px 20px;
    margin: 0;
-   
+
 }
 
 footer p a {
@@ -362,11 +376,12 @@ footer p a:hover {
    color: rgb(99, 69, 138);
 }
 
-@media (width <= 769px){
+@media (width <=769px) {
    footer {
       text-align: center;
    }
-   #whoweare{
+
+   #whoweare {
       padding: 0;
       padding-top: 10px;
    }
