@@ -359,4 +359,7 @@ footer p a:hover {
    footer {
       text-align: center;
    }
+   #whoweare{
+      padding: 0;
+   }
 }
