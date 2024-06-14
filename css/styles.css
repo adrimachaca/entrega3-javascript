@@ -1,17 +1,23 @@
 /* Importación de GoogleFonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Variables CSS */
+:root {
+   --primary-color: rgb(99, 69, 138);
+   --secondary-color: gray;
+   --background-color: black;
+   --font-color: white;
+   --font-family: "Open Sans", sans-serif;
+   --header-height: 400px;
+   --header-mini-height: 200px;
+}
+
 /* Estilos generales */
-
-/* * {
-   margin: 0;
-} */
-
 body {
-   font-family: "Open Sans", sans-serif;
-   background-color: black;
+   font-family: var(--font-family);
+   background-color: var(--background-color);
    max-width: 1200px;
+   margin: 0 auto;
 }
 
 h1 {
@@ -27,45 +33,34 @@ h3 {
 .titleSection {
    font-weight: 400;
    font-size: 2em;
-   padding: 0px 0 30px 0;
-   color: #000;
+   padding: 0 0 30px;
+   color: var(--background-color);
    text-align: center;
 }
 
 .subtitleSection {
-   color: gray;
+   color: var(--secondary-color);
    text-align: center;
    width: 50%;
-   margin: 0 auto 40px auto;
+   margin: 0 auto 40px;
 }
 
 .header {
    background-image: url("../img/header.jpg");
-   height: 400px;
+   height: var(--header-height);
    background-position: center;
    background-size: cover;
    display: flex;
    align-items: center;
    padding: 50px;
-   color: white;
-
-}
-
-@media (width <=769px) {
-   .header {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../img/header-mini.png");
-      text-align: center;
-      color: black;
-      height: 200px;
-   }
+   color: var(--font-color);
 }
 
 /*--------------------------------------------NavBar--------------------------------------------*/
 
 nav {
-   background-color: rgb(99, 69, 138);
+   background-color: var(--primary-color);
    padding: 25px 0;
-
 }
 
 nav ul li {
@@ -75,39 +70,33 @@ nav ul li {
 }
 
 nav a {
-   color: #ffffff;
+   color: var(--font-color);
    padding: 15px;
    margin-right: 15px;
    text-decoration: none;
 }
 
 nav a:hover {
-   background-color: #ffffff;
-   color: #6C22A6;
+   background-color: var(--font-color);
+   color: var(--primary-color);
    border-radius: 5px;
-}
-
-@media (width <=992px) {
-   #navegacion {
-      justify-content: end;
-   }
 }
 
 /* Who We are section */
 
 #whoweare {
    background-color: rgba(211, 211, 211, 0.192);
-   color: grey;
+   color: var(--secondary-color);
    width: 100%;
-   padding: 30px 50px 0px 50px;
+   padding: 30px 50px 0;
 }
 
 .titleSection {
-   color: black;
+   color: var(--background-color);
 }
 
 .lore {
-   color: black;
+   color: var(--background-color);
 }
 
 .subtitleSection {
@@ -127,7 +116,7 @@ nav a:hover {
 
 .columnas {
    text-align: justify;
-   color: gray;
+   color: var(--secondary-color);
    column-gap: 40px;
    margin: 20px;
    padding: 2px 40px;
@@ -137,13 +126,6 @@ nav a:hover {
    border-left: 1px solid rgba(119, 136, 153, 0.274);
    padding-left: 20px;
    position: relative;
-}
-
-@media (width <=992px) {
-   .vl {
-      border-left: none;
-      padding-left: 0px;
-   }
 }
 
 /*--------------------------------------------Services Section--------------------------------------------*/
@@ -156,7 +138,7 @@ nav a:hover {
    display: flex;
    justify-content: center;
    align-items: center;
-   color: rgb(99, 69, 138);
+   color: var(--primary-color);
    height: 60px;
    width: 60px;
    margin-right: 8px;
@@ -177,14 +159,14 @@ nav a:hover {
 }
 
 #services i:hover {
-   background-color: rgb(99, 69, 138);
-   color: #ffffff;
+   background-color: var(--primary-color);
+   color: var(--font-color);
    transition: 0.5s;
 }
 
 .cardServices p {
    line-height: 2em;
-   color: gray;
+   color: var(--secondary-color);
 }
 
 .cardServices h3 {
@@ -200,14 +182,7 @@ nav a:hover {
    padding: 40px 20px;
 }
 
-.imgrote {
-   width: 250px;
-   height: 150px;
-   margin: 5px;
-   padding: 5px;
-}
-
-/*Valores generales para ajustar las imagenes*/
+.imgrote,
 .rotacion360 {
    width: 250px;
    height: 150px;
@@ -226,7 +201,6 @@ nav a:hover {
    border-radius: 50%;
 }
 
-/*Valores de transicion para la rotacion*/
 .imgrote {
    transform: rotate(0deg);
    transition: 1s;
@@ -237,36 +211,31 @@ nav a:hover {
    transition: 1s ease-in-out;
 }
 
-
 /*--------------------------------------------Location--------------------------------------------*/
-
 
 #location {
    text-align: center;
    padding: 40px 20px;
-   margin: 0px;
+   margin: 0;
 }
 
-#titleMaps h2 {
-   font-family: "Open Sans", sans-serif;
+#titleMaps h2,
+#titleMaps h3 {
+   font-family: var(--font-family);
    width: 100%;
    padding: 10px;
    margin: 10px;
 }
 
 #titleMaps h3 {
-   font-family: "Open Sans", sans-serif;
-   width: 100%;
-   padding: 10px;
-   margin: 10px;
-   color: gray;
+   color: var(--secondary-color);
 }
 
 #maps>article>iframe {
    column-count: 2;
    padding: 1px;
    margin: 1px;
-   background-color: black;
+   background-color: var(--background-color);
 }
 
 #mapa {
@@ -281,7 +250,7 @@ nav a:hover {
 }
 
 #mapaGoogle :hover {
-   border-radius: 0px;
+   border-radius: 0;
    transform: scale(1.2);
 }
 
@@ -289,46 +258,6 @@ nav a:hover {
    text-align: left;
    width: 100%;
    padding: 10px;
-}
-
-@media (width <=769px) {
-
-   #location {
-      text-align: center;
-      width: 100%;
-
-   }
-
-   #titleMaps h2 {
-      font-family: "Open Sans", sans-serif;
-      text-align: center;
-      width: 100%;
-   }
-
-   #titleMaps h3 {
-      font-family: "Open Sans", sans-serif;
-      text-align: center;
-      width: 100%;
-      color: gray;
-   }
-
-   #location address {
-      text-align: center;
-      width: 100%;
-   }
-
-   #address strong {
-      padding: 50px;
-   }
-
-   #mapaGoogle {
-      text-align: center;
-      width: 100%;
-   }
-
-   #maps>article>iframe {
-      background-color: black;
-   }
 }
 
 /* Contact section */
@@ -339,44 +268,80 @@ nav a:hover {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-   color: #ffffff;
+   color: var(--font-color);
    padding: 40px 20px;
 }
 
 #contact .titleSection {
-   color: #ffffff;
+   color: var(--font-color);
 }
 
 #contact form {
    margin: 0 auto;
 }
 
-@media (width >=810px) {
-   #contact form {
-      width: 50%;
-   }
-}
+/* Footer section */
 
 footer p {
    background-color: rgba(99, 69, 138, 0.8);
-   color: #ffffff;
+   color: var(--font-color);
    text-align: right;
    font-size: large;
    padding: 20px 20px;
    margin: 0;
-
 }
 
 footer p a {
-   color: #ffffff;
+   color: var(--font-color);
 }
 
 footer p a:hover {
-   background-color: #ffffff;
-   color: rgb(99, 69, 138);
+   background-color: var(--font-color);
+   color: var(--primary-color);
 }
 
-@media (width <=769px) {
+/* Media Queries */
+
+@media (max-width: 992px) {
+   #navegacion {
+      justify-content: end;
+   }
+
+   .vl {
+      border-left: none;
+      padding-left: 0;
+   }
+}
+
+@media (max-width: 769px) {
+   .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../img/header-mini.png");
+      text-align: center;
+      color: var(--background-color);
+      height: var(--header-mini-height);
+   }
+
+   #location,
+   #titleMaps h2,
+   #titleMaps h3,
+   #location address,
+   #mapaGoogle {
+      text-align: center;
+      width: 100%;
+   }
+
+   #titleMaps h3 {
+      color: var(--secondary-color);
+   }
+
+   #address strong {
+      padding: 50px;
+   }
+
+   #maps>article>iframe {
+      background-color: var(--background-color);
+   }
+
    footer {
       text-align: center;
    }
@@ -384,5 +349,11 @@ footer p a:hover {
    #whoweare {
       padding: 0;
       padding-top: 10px;
+   }
+}
+
+@media (min-width: 810px) {
+   #contact form {
+      width: 50%;
    }
 }
