@@ -260,17 +260,21 @@ nav a:hover {
 }
 
 #mapa{
-   border-radius: 150px;
-   width: 100%;
    width: 300px;
    height: 300px;
+   border-radius: 50%;
+   transition: 0.5s;
+}
+
+#mapaGoogle :hover{
+   border-radius: 0px;
+   transform: scale(1.2);
 }
 
 #location address{
    text-align: left;
    width: 100%;
    padding: 10px;    
-   margin: 10px; 
 }
 
 @media (width <= 769px){
@@ -303,7 +307,7 @@ nav a:hover {
       padding: 50px;
    }
  
-   #mapaGoolge{
+   #mapaGoogle{
       text-align: center;
       width: 100%;
    }
