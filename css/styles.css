@@ -263,7 +263,7 @@ nav a:hover {
 /* Contact section */
 
 #contact {
-  background-color: rgb(122, 98, 156);
+  background-color: rgb(181, 162, 207);
   background-image: url("/img/map-image.png");
   background-size: cover;
   background-position: center;
@@ -278,6 +278,19 @@ nav a:hover {
 
 #contact form {
   margin: 0 auto;
+}
+
+#emailWarning{
+  font-size: medium;
+  font-weight: bolder;
+  color: red;
+  text-decoration: underline;
+}
+#phoneWarning{
+  font-size: medium;
+  font-weight: bolder;
+  color: red;
+  text-decoration: underline;
 }
 
 /* Footer section */
